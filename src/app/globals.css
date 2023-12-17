@@ -1,0 +1,330 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons";
+@import "lightbox2/dist/css/lightbox.min.css";
+:root {
+  --testColor: #0b0c27;
+  --hoverColor: #75757a;
+  --softColor: #dfd9ff;
+  --bgColor: #b3c9fb;
+  --tickwhite: #f2f2f2;
+  --dark1: #000000ad;
+  --bg: #f8f9fa;
+}
+
+body {
+  background: var(--bg);
+  background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
+    url("/imgs/bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  object-fit: cover;
+}
+
+/*--------------------------------------------------------------
+# Navbar Section
+--------------------------------------------------------------*/
+.navbar {
+  padding: 0;
+  background-color: var(--bg);
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: end;
+}
+
+.navbar li {
+  position: relative;
+}
+.navbar a:hover {
+  opacity: 0.6;
+}
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--testColor);
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover > a {
+  color: var(--testColor);
+}
+
+/*--------------------------------------------------------------
+#Welcome Section
+--------------------------------------------------------------*/
+
+.parallax-header {
+  background: rgb(35, 35, 78);
+  background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
+    url("/imgs/ak1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  object-fit: cover;
+}
+
+.header-content {
+  padding: 90px 0 500px 0;
+}
+
+.content {
+  margin-top: -400px;
+  margin-bottom: 50px;
+}
+
+@media (max-width: 767px) {
+  .header-content {
+    padding: 90px 0 420px 0;
+  }
+
+  .content {
+    margin-top: -300px;
+  }
+}
+.left {
+  background-color: #bdb3fdb6;
+  border-radius: 4px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+.left h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.4em;
+  color: #252537;
+  text-shadow: #252537;
+  text-transform: uppercase;
+}
+
+.left h4 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4em;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+@media (max-width: 768px) {
+  .left h1 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.6em;
+    text-shadow: #252537;
+    text-transform: justify;
+    letter-spacing: 2px;
+  }
+
+  .left h4 {
+    font-size: 15px;
+    line-height: 1.4em;
+  }
+}
+
+.left .learn {
+  animation-delay: 2s;
+  color: #f2f2f2;
+  opacity: 0.3;
+}
+/*--------------------------------------------------------------
+#card
+--------------------------------------------------------------*/
+.card {
+  background-color: #a193fd17;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  cursor: pointer;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+@media (min-width: 769px) {
+  .card-img {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+}
+@media (max-width: 768px) {
+  .card-img {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+  }
+}
+
+.card-btn,
+.btn-submit {
+  width: 100px;
+  height: 35px;
+  background-color: #a193fd;
+  border-radius: 0px;
+  font-size: 15px;
+}
+.card-btn,
+.btn-submit:hover {
+  background-color: var(--softColor);
+  color: var(--dark1);
+}
+
+#about .card-body,
+.card-location {
+  cursor: auto;
+}
+.bg-color {
+  background-color: #75757ab2;
+}
+/*see all*/
+.seeall {
+  color: var(--dark1);
+  text-decoration: none;
+}
+.seeall:hover {
+  color: #a193fd;
+}
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+.section-bg,
+.services .icon-box {
+  background-color: #f8f9fa;
+}
+
+.section-title {
+  padding-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0;
+  line-height: 1px;
+  margin: 0 0 5px 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bdb3fd;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.section-title h2::after {
+  content: "";
+  width: 120px;
+  height: 1px;
+  display: inline-block;
+  background: #bdb3fd;
+  margin: 4px 10px;
+}
+
+.section-title p {
+  margin: 0;
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: var(--dark1);
+}
+/*--------------------------------------------------------------
+#details
+--------------------------------------------------------------*/
+#details {
+  padding: 40px 0 80px;
+}
+#details .btn-details {
+  width: 150px;
+  height: 35px;
+  background-color: #a193fd;
+  border-radius: 0px;
+}
+#details .btn-details:hover {
+  background-color: var(--softColor);
+  color: var(--dark1);
+}
+#details .card-img-top,
+.card {
+  border-radius: 0px;
+}
+#details .card {
+  border-radius: 4px;
+}
+/*--------------------------------------------------------------
+#admin
+--------------------------------------------------------------*/
+#admin .card-admin {
+  border-top-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+/*FOOTER*/
+#footer {
+  padding: 20px 0 20px;
+  font-size: 15px;
+}
+/*-------------------------------------------------
+EDIT BUTTON
+----------------------------------------------------*/
+#adminedit .card-edit {
+  width: 90px;
+  height: 35px;
+  background-color: #a193fd;
+  border-radius: 0px;
+  font-size: 15px;
+  font-weight: normal;
+  border-radius: 4px;
+}
+.card-delete {
+  width: 90px;
+  height: 35px;
+  background-color: #a193fd;
+  border-radius: 0px;
+  font-size: 15px;
+  font-weight: normal;
+  border-radius: 4px;
+}
+#adminedit .card-edit:hover {
+  background-color: var(--softColor);
+  color: var(--dark1);
+}
+.card-delete:hover {
+  background-color: var(--softColor);
+  color: var(--dark1);
+}
+.card-search{
+  width: 90px;
+  height: 35px;
+  background-color: #a193fd;
+  border-radius: 0px;
+  font-size: 15px;
+}
