@@ -1,6 +1,7 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons";
 @import "lightbox2/dist/css/lightbox.min.css";
+@import "animate.css";
 :root {
   --testColor: #0b0c27;
   --hoverColor: #75757a;
@@ -14,7 +15,7 @@
 body {
   background: var(--bg);
   background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
-    url("/imgs/bg.png");
+    url("/imgs/bg2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -73,7 +74,7 @@ body {
 .parallax-header {
   background: rgb(35, 35, 78);
   background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
-    url("/imgs/ak1.jpg");
+    url("/imgs/bg1.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -321,10 +322,17 @@ EDIT BUTTON
   background-color: var(--softColor);
   color: var(--dark1);
 }
-.card-search{
+.card-search {
   width: 90px;
   height: 35px;
   background-color: #a193fd;
   border-radius: 0px;
   font-size: 15px;
+}
+
+.bi-arrow-down-circle {
+ animation-duration: 4s;
+  animation-timing-function: .6s;
+  
+  opacity: 0.3;
 }

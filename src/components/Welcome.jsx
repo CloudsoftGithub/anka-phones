@@ -29,9 +29,9 @@ export default function Welcome() {
             where we sale <span className="instructor"> phones</span> at 
               <span className="student">  affordable</span> price.
             </h4>
-            <div className="d-flex justify-content-center">
+            <div className="d-flex justify-content-center ">
               <Link href="#newlyproduct" className="btn btn-code me-2">
-               <i className=" bi bi-arrow-down-circle h1"></i>
+               <i className=" animate__animated animate__bounceIn animate__infinite bi bi-arrow-down-circle h1"></i>
               </Link>
 
             </div>
