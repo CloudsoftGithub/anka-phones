@@ -11,6 +11,7 @@ export default function AdminSearch() {
     <>
       <SearchBar setResults={setResults} />
       <SearchResultList results={results} />
+      
     </>
   );
 }

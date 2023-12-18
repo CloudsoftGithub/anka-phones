@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LandingFooter from "./LandingFooter";
 
 export default function AboutUs() {
   return (
@@ -85,6 +86,8 @@ export default function AboutUs() {
           </div>
         </div>
       </div>
+      <div className="mt-4">
+      <LandingFooter/></div>
     </section>
   );
 }

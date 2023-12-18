@@ -11,7 +11,7 @@ export default async function AdminView() {
           <i className="bi bi-arrow-left mx-1"> </i>
         </Link>
         <div class="section-title text-center">
-          <p>Anka Phones</p>
+          <p className="py-2">Anka Phones</p>
           <h2 className="mb-2">You can Edit and delete here!</h2>
           <hr className="mb-2 mt-2" />
           <Link href="/allproducts" className="text-decoration-none"></Link>
@@ -30,11 +30,11 @@ export default async function AdminView() {
         {prod.map((pro) => {
           return (
             
-              <div className="col-6 col-lg-4 col-xl-3" key={pro.id}>
-                <div className="card h-100 mb-3">
+              <div className="col-12 col-lg-4 col-xl-3" key={pro.id}>
+                <div className="card h-75 mb-5">
                   <img src={pro.image} className="card-img" alt="product image"/>
                   <div className="card-body">
-                    <h5 className="card-subtitle">{pro.name}</h5>
+                    <h5 className="card-subtitle ">{pro.name}</h5>
                     <div>
                       <p className="card-text ">
                         <span>Price:</span> {pro.price}

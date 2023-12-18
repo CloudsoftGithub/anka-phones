@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function Footer() {
+export default function LandingFooter() {
   return (
-    <footer id="foot" className='section-bg text-center foot shadow-lg fixed-bottom'>
+    <footer id="foot" className='section-bg text-center foot shadow-lg position-sticky'>
     <div class="container ">
       <div class="copyright">
         &copy; Copyright

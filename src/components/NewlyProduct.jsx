@@ -8,9 +8,9 @@ export default async function NewlyProduct() {
     <>
       <section id="newlyproduct" className="section-bg ">
         <div className="container">
-          <div class="section-title">
-            <p>Anka Phones</p>
-            <h2>Check our newly Products</h2>
+          <div class="section-title text-center text-lg-start">
+            <p className="py-2">Anka Phones</p>
+            <h2 className="py-1">Check our newly Products</h2>
             <hr className="mb-0" />
             <Link href="/allproducts" className="text-decoration-none">
               <div className=" justify-content-end d-flex">
@@ -33,11 +33,11 @@ export default async function NewlyProduct() {
           <div className="row  mb-4 justify-content-center align-items-center">
             {prt.map((pro) => {
               return (
-                <div className="col-6 col-lg-4 col-xl-3" key={pro.id}>
-                  <div className="card h-100 mb-3">
+                <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={pro.id}>
+                  <div className="card h-75 mb-5">
                     <img src={pro.image} className="card-img" alt="product image"/>
                     <div className="card-body">
-                      <h5 className="card-subtitle">{pro.name}</h5>
+                      <h5 className="card-subtitle text-truncate">{pro.name}</h5>
 
                       <div className="d-flex mt-3 flex-row justify-content-between">
                         <div>

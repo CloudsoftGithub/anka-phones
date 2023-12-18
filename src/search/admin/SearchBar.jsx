@@ -30,7 +30,7 @@ export default function SearchBar({ setResults }) {
   return (
    
  <div className="container section-bg">
-      <div className=" d-flex justify-content-center align-items-center mt-4 mb-3 mb-2 text-justify">
+      <div className=" d-flex justify-content-center align-items-center mb-3 mb-2 text-justify">
         <Link
           className="btn border-0  back  shadow btn-sm mx-1"
           href="/adminview"

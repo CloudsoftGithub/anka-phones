@@ -3,8 +3,8 @@ import Link from "next/link"
 export default function ViewCom() {
   return (
     <div className="card">
-    <div className="card-body">
-      <h5 className="card-subtitle">View</h5>
+    <div className="card-body text-center">
+      <h5 className="card-subtitle text-truncate">View</h5>
       <Link href="/adminview" className="text-decoration-none">
         <div className="card mt-2 card-admin px-4">
           <h5 className="card-subtitle mb-2"></h5>

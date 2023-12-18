@@ -6,7 +6,6 @@ import { Inter } from "next/font/google";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 {
@@ -36,7 +35,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <Header />
         {children}
-        <Footer/>
+       
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import getSingle from "@/product-fetch/getSingle";
 import Link from "next/link";
 
@@ -62,7 +63,9 @@ export default async function Details({ params: { id } }) {
             </div>
           </div>
         </div>
+        
       </section>
+      <Footer/>
     </>
   );
 }

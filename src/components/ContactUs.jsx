@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LandingFooter from "./LandingFooter";
 export default function ContactUs() {
   return (
     <>
@@ -9,7 +10,7 @@ export default function ContactUs() {
             <hr className="mb-0" />
           </div>
 
-          <div className="row gy-3 justify-content-center align-items-center">
+          <div className="row gy-3 justify-content-center align-items-center ">
             <div className="col-12 col-lg-6 align-self-start order-1 order-lg-0">
               <div className="card">
                 <Link
@@ -99,6 +100,8 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+        <div className="mt-4">
+      <LandingFooter/></div>
       </section>
     </>
   );

@@ -7,8 +7,8 @@ export default async function Allproduct() {
       <section id="allproduct" className="section-bg ">
         <div className="container">
           <div class="section-title text-center">
-            <p>Anka Phones</p>
-            <h2>All Products</h2>
+            <p className="py-2">Anka Phones</p>
+            <h2 className="py-1">All Products</h2>
             <hr className="mb-0" />
             <div className="shadow-none mb-1 py-2">
               <Link
@@ -23,14 +23,14 @@ export default async function Allproduct() {
               </Link>
             </div>
           </div>
-          <div className="row  mb-4 justify-content-center align-items-center">
+          <div className="row  mb-4 justify-content-center align-items-center" id="allprod">
             {prod.map((pro) => {
               return (
-                <div className="col-6 col-lg-4 col-xl-3" key={pro.id}>
-                  <div className="card h-100 mb-3">
+                <div className="col-12  col-md-6 col-lg-4 col-xl-3" key={pro.id}>
+                  <div className="card h-75 mb-5">
                     <img src={pro.image} className="card-img" alt="product image"/>
                     <div className="card-body">
-                      <h5 className="card-subtitle">{pro.name}</h5>
+                      <h5 className="card-subtitle text-truncate">{pro.name}</h5>
 
                       <div className="d-flex mt-3 flex-row justify-content-between">
                         <div>

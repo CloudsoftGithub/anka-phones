@@ -12,17 +12,17 @@
   --bg: #f8f9fa;
 }
 
-body {
+body  {/*
   background: var(--bg);
-  background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
+ background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
     url("/imgs/bg2.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-blend-mode: multiply;
-  object-fit: cover;
-}
+ }
+*/}
 
 /*--------------------------------------------------------------
 # Navbar Section
@@ -74,13 +74,14 @@ body {
 .parallax-header {
   background: rgb(35, 35, 78);
   background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
-    url("/imgs/bg1.jpg");
+    url("/imgs/bg2.jpg");
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   background-blend-mode: multiply;
   object-fit: cover;
+  
 }
 
 .header-content {
@@ -94,11 +95,11 @@ body {
 
 @media (max-width: 767px) {
   .header-content {
-    padding: 90px 0 420px 0;
+    padding: 90px 0 450px 0;
   }
 
   .content {
-    margin-top: -300px;
+    margin-top: -400px;
   }
 }
 .left {
@@ -243,15 +244,15 @@ section {
 .section-title h2::after {
   content: "";
   width: 120px;
-  height: 1px;
+  height: 4px;
   display: inline-block;
   background: #bdb3fd;
-  margin: 4px 10px;
+  margin: 10px 10px 2px;
 }
 
 .section-title p {
   margin: 0;
-  margin: 0;
+  padding: auto;
   font-size: 30px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
@@ -260,9 +261,7 @@ section {
 /*--------------------------------------------------------------
 #details
 --------------------------------------------------------------*/
-#details {
-  padding: 40px 0 80px;
-}
+
 #details .btn-details {
   width: 150px;
   height: 35px;
@@ -287,12 +286,16 @@ section {
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
 }
-
 /*FOOTER*/
-#footer {
+#foot {
+margin: -10px 0 ;
   padding: 20px 0 20px;
   font-size: 15px;
 }
+#details{
+  padding: 30px 0 200px;
+}
+
 /*-------------------------------------------------
 EDIT BUTTON
 ----------------------------------------------------*/
@@ -335,4 +338,8 @@ EDIT BUTTON
   animation-timing-function: .6s;
   
   opacity: 0.3;
+}
+/* All product footer margin*/
+#allprod{
+  margin-bottom:50%;
 }
