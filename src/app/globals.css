@@ -81,6 +81,7 @@ body  {/*
   background-size: cover;
   background-blend-mode: multiply;
   object-fit: cover;
+  overflow: hidden;
   
 }
 

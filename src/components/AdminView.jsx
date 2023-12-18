@@ -30,7 +30,7 @@ export default async function AdminView() {
         {prod.map((pro) => {
           return (
             
-              <div className="col-12 col-lg-4 col-xl-3" key={pro.id}>
+              <div className="col-12 col-md-6 col-lg-4 col-xl-3" key={pro.id}>
                 <div className="card h-75 mb-5">
                   <img src={pro.image} className="card-img" alt="product image"/>
                   <div className="card-body">
