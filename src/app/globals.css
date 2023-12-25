@@ -12,18 +12,10 @@
   --bg: #f8f9fa;
 }
 
-body  {/*
-  background: var(--bg);
+body  {
  background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(8, 8, 38, 0.8)),
-    url("/imgs/bg2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-blend-mode: multiply;
- }
-*/}
-
+ 
+}
 /*--------------------------------------------------------------
 # Navbar Section
 --------------------------------------------------------------*/
@@ -258,6 +250,11 @@ section {
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   color: var(--dark1);
+}
+
+.add-photo{
+  height: 10%;
+  width: 20%;
 }
 /*--------------------------------------------------------------
 #details

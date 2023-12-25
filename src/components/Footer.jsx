@@ -1,4 +1,4 @@
-import React from 'react'
+import Link from 'next/link'
 
 export default function Footer() {
   return (
@@ -12,9 +12,9 @@ export default function Footer() {
         . All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="/"> CloudSoft Consulting Ltd</a>
+        Designed by<a href="/"> CloudSoft Consulting Ltd</a>
       </div>
-    </div>
+    </div> 
   </footer>
   )
 }

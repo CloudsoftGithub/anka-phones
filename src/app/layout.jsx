@@ -29,13 +29,12 @@ export default function RootLayout({ children }) {
   });
   useEffect(() => {
     import("lightbox2/dist/js/lightbox-plus-jquery.min.js");
-  })
+  });
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
         {children}
-       
       </body>
     </html>
   );

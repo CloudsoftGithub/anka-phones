@@ -28,7 +28,7 @@ export default async function Allproduct() {
               return (
                 <div className="col-12  col-md-6 col-lg-4 col-xl-3" key={pro.id}>
                   <div className="card h-75 mb-5">
-                    <img src={pro.image} className="card-img" alt="product image"/>
+                    <img src={pro.imgUrl} className="card-img" alt="product image"/>
                     <div className="card-body">
                       <h5 className="card-subtitle text-truncate">{pro.name}</h5>
 

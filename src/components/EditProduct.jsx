@@ -1,46 +1,45 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import React, { useState } from "react";
 import ViewCom from "./ViewCom";
 
-export default function Admin() {
-  const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [description, setDescription] = useState("");
-  const [photo, setPhoto] = useState("");
+export default function EditProduct({ id, name, price, description, imgUrl }) {
+  const router = useRouter();
+
+  const [newName, setNewName] = useState(name);
+  const [newPrice, setNewPrice] = useState(price);
+  const [newDescription, setNewDescription] = useState(description);
+  const [newPhoto, setNewPhoto] = useState(imgUrl);
 
   const CLOUD_NAME = "djkeyh3y0";
   const UPLOAD_PRESET = "csc_course";
 
-  const router = useRouter();
 
   async function handleSubmit(e) {
     e.preventDefault();
 
-    if (!name || !price || !description || !photo) {
-      alert("All fields are needede!!!");
-      return;
-    }
-    const imgUrl = await uploadImage();
-    const response = await fetch("http://localhost:3000/api/products", {
-      method: "POST",
+    const newImgUrl = await udateImage();
+    
+    const response = await fetch(`http://localhost:3000/api/products/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ name, price, description, imgUrl }),
+      body: JSON.stringify({ newName, newPrice, newDescription, newImgUrl }),
     });
     if (response.status == 200) {
-      router.refresh();
       router.push("/adminview");
+      router.refresh();
     }
+    //console.log(newUser);
   }
 
-  const uploadImage = async () => {
-    if (!photo) return;
+  const udateImage = async () => {
+    if (!newPhoto) return;
 
     const formData = new FormData();
 
-    formData.append("file", photo);
+    formData.append("file", newPhoto);
     formData.append("upload_preset", UPLOAD_PRESET);
 
     try {
@@ -54,9 +53,9 @@ export default function Admin() {
 
       const data = await res.json();
 
-      const imgUrl = data["secure_url"];
+      const newImgUrl = data["secure_url"];
 
-      return imgUrl;
+      return newImgUrl;
     } catch (error) {
       console.log(error);
     }
@@ -66,7 +65,7 @@ export default function Admin() {
     <section className="section-bg" id="admin">
       <div className="container">
         <div class="section-title text-center">
-          <p className="mb-2">Add Product</p>
+          <p className="mb-2">Eit Product</p>
           <h2>Welcome Back</h2>
           <hr className="mb-0" />
         </div>
@@ -75,7 +74,8 @@ export default function Admin() {
           <div className="col-12 col-lg-6 align-self-start ">
             <div className="card ">
               <div className="card-body">
-                <h5 className="card-subtitle mb-3">Adding Product</h5>
+                <h5 className="card-subtitle mb-3">Editing Product</h5>
+
                 <form className="g-2 " onSubmit={handleSubmit}>
                   <div className="col-md-12 ">
                     <label htmlFor="name" className="form-label">
@@ -85,8 +85,8 @@ export default function Admin() {
                     <input
                       type="text"
                       className="form-control shadow-sm"
-                      onChange={(e) => setName(e.target.value)}
-                      value={name}
+                      onChange={(e) => setNewName(e.target.value)}
+                      value={newName}
                     />
                   </div>
                   <div className="col-md-12">
@@ -96,8 +96,8 @@ export default function Admin() {
                     <input
                       type="text"
                       className="form-control  shadow-sm"
-                      onChange={(e) => setPrice(e.target.value)}
-                      value={price}
+                      onChange={(e) => setNewPrice(e.target.value)}
+                      value={newPrice}
                     />
                   </div>
 
@@ -109,8 +109,8 @@ export default function Admin() {
                       className="form-control  shadow-sm"
                       id="description"
                       rows="3"
-                      onChange={(e) => setDescription(e.target.value)}
-                      value={description}
+                      onChange={(e) => setNewDescription(e.target.value)}
+                      value={newDescription}
                     ></textarea>
                   </div>
                   <div className="col-md-12">
@@ -120,21 +120,12 @@ export default function Admin() {
                     <input
                       type="file"
                       className="form-control  shadow-sm"
-                      onChange={(e) => setPhoto(e.target.files[0])}
+                      onChange={(e) => setNewPhoto(e.target.files[0])}
                     />
                   </div>
-                  <div className="col-md-12 mt-2 mb-0">
-                    {photo && (
-                      <img
-                        className="add-photo"
-                        src={URL.createObjectURL(photo)}
-                        alt=""
-                      />
-                    )}
-                  </div>
-
+                  
                   <div className="d-flex align-self-end justify-content-end text-end">
-                    <button type="submit" className="btn btn-submit my- ">
+                    <button type="submit" className="btn btn-submit my-2 ">
                       SUBMIT
                     </button>
                   </div>
@@ -143,10 +134,9 @@ export default function Admin() {
             </div>
           </div>
           <div className="col-12 col-lg-4 align-self-center justify-content-end">
-          <ViewCom />
+            <ViewCom />
           </div>
         </div>
-        
       </div>
     </section>
   );

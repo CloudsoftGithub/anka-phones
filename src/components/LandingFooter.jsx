@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function LandingFooter() {
@@ -12,7 +13,7 @@ export default function LandingFooter() {
         . All Rights Reserved
       </div>
       <div class="credits">
-        Designed by <a href="/"> CloudSoft Consulting Ltd</a>
+        <Link className='text-decoration-none text-dark' href='/create'>Designed </Link>by <a href=""> CloudSoft Consulting Ltd</a>
       </div>
     </div>
   </footer>

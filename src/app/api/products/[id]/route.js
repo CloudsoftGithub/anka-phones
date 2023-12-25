@@ -1,26 +1,56 @@
-import products from "@/models/products";
+import Products from "@/models/Products";
 import { NextResponse } from "next/server";
 
-
-export async function GET (req, {params:{id}}){
-    try {
-     
-      const prod1 = await products.findOne({_id:id})
-      return NextResponse.json(prod1)
-
-    } catch (error) {
-        return NextResponse.json("error in fetching single id");
-    }
+export async function GET(request, { params: { id } }) {
+  try {
+    const user = await Products.findOne({ _id: id });
+    return NextResponse.json(user, { status: 200 });
+  } catch (error) {
+    return NextResponse.json(
+      {
+        message: "Failed to fetch User",
+        error,
+      },
+      {
+        status: 500,
+      }
+    );
+  }
 }
 
-export async function PUT ({params:{id}, req}){
-try {
-   
-    const body = await req.json();
-    const updateprod1 = await products.findByIdAndUpdate(id,body);
-    return NextResponse.json({msg:"updated", updateprod1});
-} catch (error) {
-    return NextResponse.json("unable to update");
-    
-}
+export async function PUT(request, { params: { id } }) {
+  try {
+    //Get the data from the request
+    const {
+      newName: name,
+      newPrice: price,
+      newDescription: description,
+      newImgUrl: imgUrl,
+    } = await request.json();
+    const newUser = {
+      name,
+      price,
+      description,
+      imgUrl,
+    };
+    //Use the Model to update
+    await Products.findByIdAndUpdate(id, newUser);
+    return NextResponse.json(
+      {
+        message: "User Updated successfully",
+        data: newUser,
+      },
+      { status: 200 }
+    );
+  } catch (error) {
+    return NextResponse.json(
+      {
+        message: "Failed to Create a User",
+        error,
+      },
+      {
+        status: 500,
+      }
+    );
+  }
 }

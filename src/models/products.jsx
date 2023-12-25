@@ -1,11 +1,11 @@
 import mongoose, { Schema, models, model } from "mongoose";
-mongoose.connect(process.env.MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URL);
 const ProductSchema = new Schema(
   {
     name: String,
     price: String,
     description: String,
-    image: String,
+    imgUrl: String,
   },
   { timestamps: true }
 );
