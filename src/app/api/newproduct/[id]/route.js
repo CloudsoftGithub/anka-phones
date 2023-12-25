@@ -1,10 +1,12 @@
-import products from "@/models/products";
+
+
+import Products from "@/models/products";
 import { NextResponse } from "next/server";
 
 export async function GET (req, {params:{id}}){
     try {
      
-      const newprod = await products.findOne({_id:id})
+      const newprod = await Products.findOne({_id:id})
       return NextResponse.json(prod1)
 
     } catch (error) {

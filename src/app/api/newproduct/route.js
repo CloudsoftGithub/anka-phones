@@ -1,10 +1,11 @@
-import products from "@/models/products";
+
+import Products from "@/models/products";
 import { NextResponse } from "next/server";
 
 export async function GET(req) {
     try {
         
-        const prt = await products.find({}, null,{
+        const prt = await Products.find({}, null,{
             sort: { _id: -1 },
             limit: 12,
         });

@@ -1,4 +1,5 @@
-import Products from "@/models/Products";
+
+import Products from "@/models/products";
 import { NextResponse } from "next/server";
 
 export async function POST(req) {
