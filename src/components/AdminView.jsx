@@ -3,7 +3,7 @@ import Link from "next/link";
 import RemoveButton from "./RemoveButton";
 
 export default async function AdminView() {
-  const prod = await getAll();
+  //const prod = await getAll();
   return (
     <section id="adminedit" className="section-bg ">
       <div className="container">

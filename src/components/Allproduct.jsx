@@ -1,7 +1,7 @@
 import getAll from "@/product-fetch/getAll";
 import Link from "next/link";
 export default async function Allproduct() {
-  const prod = await getAll();
+  //const prod = await getAll();
   return (
     <>
       <section id="allproduct" className="section-bg ">

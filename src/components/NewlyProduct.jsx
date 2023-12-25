@@ -3,7 +3,7 @@ import getNew from "@/product-fetch/getNew";
 import Link from "next/link";
 
 export default async function NewlyProduct() {
-  const prt = await getNew();
+  //const prt = await getNew();
   return (
     <>
       <section id="newlyproduct" className="section-bg ">
