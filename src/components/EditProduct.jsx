@@ -126,7 +126,7 @@ export default function EditProduct({ id, name, price, description, imgUrl }) {
                   
                   <div className="d-flex align-self-end justify-content-end text-end">
                     <button type="submit" className="btn btn-submit my-2 ">
-                      SUBMIT
+                      UPDATE
                     </button>
                   </div>
                 </form>
