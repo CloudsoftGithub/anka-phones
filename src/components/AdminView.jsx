@@ -26,7 +26,7 @@ const prod = await getAll();
             />
           </Link>
         </div>
-        <div className="row  mb-4 justify-content-center align-items-center">
+        <div className="row  mb-4 align-items-center">
         {prod.map((pro) => {
           return (
             

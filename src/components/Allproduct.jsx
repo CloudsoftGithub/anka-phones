@@ -23,7 +23,7 @@ export default async function Allproduct() {
               </Link>
             </div>
           </div>
-          <div className="row  mb-4 justify-content-center align-items-center" id="allprod">
+          <div className="row  mb-4 align-items-center" id="allprod">
             {prod.map((pro) => {
               return (
                 <div className="col-12  col-md-6 col-lg-4 col-xl-3" key={pro.id}>
