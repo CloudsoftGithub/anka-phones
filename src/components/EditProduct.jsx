@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 import ViewCom from "./ViewCom";
@@ -19,7 +20,7 @@ export default function EditProduct({ id, name, price, description, imgUrl }) {
 
     const newImgUrl = await udateImage();
     
-    const response = await fetch(`http://localhost:3000/api/products/${id}`, {
+    const response = await fetch(`/api/products/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
