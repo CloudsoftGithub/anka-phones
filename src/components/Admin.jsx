@@ -22,7 +22,7 @@ export default function Admin() {
       return;
     }
     const imgUrl = await uploadImage();
-    const response = await fetch("http://localhost:3000/api/products", {
+    const response = await fetch("/api/products", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
