@@ -26,13 +26,13 @@ export default async function Details({ params: { id } }) {
                 <div className="row d-flex flex-column flex-md-row">
                   <div className="col-12 col-md-5">
                     <Link
-                      href={`${pro.image}`}
+                      href={`${pro.imgUrl}`}
                       data-lightbox="about-image"
                       data-title=" product full image"
                       className="glightbox mb-0"
                     >
                       <img
-                        src={pro.image}
+                        src={pro.imgUrl}
                         className="card-img-top img-fluid"
                         alt="product image"
                       />
