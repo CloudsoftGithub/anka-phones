@@ -14,8 +14,7 @@ export default function EditProduct({ id, name, price, description, imgUrl }) {
   const CLOUD_NAME = "djkeyh3y0";
   const UPLOAD_PRESET = "csc_course";
 
-
-  async function handleSubmit(e) {
+  async function handleUpdate(e) {
     e.preventDefault();
 
     const newImgUrl = await udateImage();
@@ -65,7 +64,7 @@ export default function EditProduct({ id, name, price, description, imgUrl }) {
     <section className="section-bg" id="admin">
       <div className="container">
         <div class="section-title text-center">
-          <p className="mb-2">Eit Product</p>
+          <p className="mb-2">Update</p>
           <h2>Welcome Back</h2>
           <hr className="mb-0" />
         </div>
@@ -74,9 +73,9 @@ export default function EditProduct({ id, name, price, description, imgUrl }) {
           <div className="col-12 col-lg-6 align-self-start ">
             <div className="card ">
               <div className="card-body">
-                <h5 className="card-subtitle mb-3">Editing Product</h5>
+                <h5 className="card-subtitle mb-3">Update</h5>
 
-                <form className="g-2 " onSubmit={handleSubmit}>
+                <form className="g-2 " onSubmit={handleUpdate}>
                   <div className="col-md-12 ">
                     <label htmlFor="name" className="form-label">
                       Product Name

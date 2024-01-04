@@ -3,7 +3,7 @@ import getSingle from "@/product-fetch/getSingle";
 import Link from "next/link";
 
 export default async function Details({ params: { id } }) {
- // const pro = await getSingle(id);
+ const pro = await getSingle(id);
   return (
     <>
       <section className="section-bg" id="details">
